@@ -1,0 +1,28 @@
+<div class="main">   
+    <div class="container border border-secondary text-center rounded">
+        <span class="badge badge-primary mt-4" >Yms</span><br>
+        <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+            <input class="mt-2" type="text" placeholder="Username" name="email" ngModel required><br>
+            <input class="mt-2" type="password" placeholder="Password" name="password" ngModel required><br>
+            <!-- <button type="button" class="btn btn-primary mt-2" (click)= "onSubmit(userPost.value)">Login</button>&nbsp;
+            <button type="reset" class="btn btn-secondary mt-2">Reset</button> -->
+            <div>
+                <button class="btn btn-primary mt-2" type="submit" [disabled]="!userPost.valid">
+                    {{ isLoginMode? 'Login' : 'Sign Up' }}
+                </button>
+                &nbsp;
+                <button class="btn btn-secondary mt-2" (click)="onSwitchMode()" type="button">
+                    Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }}
+                </button>
+            </div>
+        </form>
+        <br>
+        <p>or</p>
+        <!-- <div style="max-width: 200px;" class="g-signin2 col-sm btn  btn-md rounded mt-2 mb-2" data-onsuccess="onSignIn" data-longtitle="true"></div><br> -->
+        <!-- <button id="googleBtn">Google</button> -->
+        <button style="max-width: 200px;" class="col-sm btn  btn-outline-danger btn-md rounded mt-2 mb-2" id="googleBtn">Login with Google</button><br>
+        <button style="max-width: 200px;" class="col-sm btn  btn-outline-primary btn-md rounded" (click)="submitLogin()">Login with Facebook</button>
+        
+       
+    </div>
+</div>

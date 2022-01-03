@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-12">
+        <b>Add Product</b>
+        <hr>
+    </div>
+</div>
+<form #addProduct="ngForm" (ngSubmit)="onSubmit(addProduct.value)">
+    <input class="mt-2" type="text" placeholder="Title" name="title" ngModel><br>
+    <input class="mt-2" type="text" placeholder="Description" name="description" ngModel><br>
+    <input class="mt-2" type="text" placeholder="Category" name="category" ngModel><br>
+    <input class="mt-2" type="number" placeholder="Price" name="price" ngModel><br>
+    <input class="mt-2" type="number" placeholder="Rating" name="rate" ngModel><br>
+    <input class="mt-2" type="number" placeholder="Reviews" name="count" ngModel><br>
+    <input class="mt-2" type="text" placeholder="Image URL" name="image" ngModel><br>
+    <button type="button" class="btn btn-primary mt-2" (click)="onSubmit(addProduct.value)">Add</button>&nbsp;
+    <button type="reset" class="btn btn-secondary mt-2">Reset</button><br>
+</form>

@@ -1,0 +1,27 @@
+.sets{
+    width: 48px;
+    height: 48px;
+}
+.active{
+    border-radius: 30px;
+    background-color: #d4e7fa !important;
+    color: #1763e6 !important;
+}
+.liColor{
+    color: #1763e6 !important;
+}
+.mar{
+    margin-left: 40px;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.sub_div {
+    position: absolute;
+    bottom: 0px;
+}
+p{
+    margin-bottom: 0px !important;
+}

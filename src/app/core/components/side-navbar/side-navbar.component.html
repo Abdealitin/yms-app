@@ -1,0 +1,53 @@
+
+<div class="row">
+    <div class="col-sm-4">
+        <!-- <img src="https://img.icons8.com/bubbles/100/000000/administrator-male.png" class="img-sm sets rounded-circle" alt="profile image"> -->
+        <svg class="bd-placeholder-img" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><image attr.xlink:href="{{imageUrl}}" height="40" width="40"></image></svg>
+    </div>
+    <div class="col-sm-8 mt-2">
+        <p>{{username}}</p>
+    </div>
+</div>
+<hr>
+<nav class="nav flex-column nav-pills">
+    <a class="nav-link bi bi-columns-gap" [routerLink]="['/dashboard']" routerLinkActive="active"> Dashoboard</a>
+    <!-- <a class="nav-link bi bi-bag" [routerLink]="['/product']" routerLinkActive="active"> Products</a> -->
+    <a href="#demo1" class="nav-link bi bi-people" data-toggle="collapse"> Products</a>
+    <div id="demo1" class="collapse mar" demo1>
+        
+            <li ><a [routerLink]="['/product']" routerLinkActive="active" style="background-color: white !important;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                <circle cx="8" cy="8" r="8"/>
+              </svg> Products List</a></li>
+            <p style="color: rgb(68, 102, 177);">------------------------</p>
+            <li style="margin-top: 0px;"><a [routerLink]="['/addproduct']" routerLinkActive="active" style="background-color: white !important;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                <circle cx="8" cy="8" r="8"/>
+              </svg> Add Product</a></li>
+        
+    </div>
+    <a class="nav-link bi bi-folder" [routerLink]="['/files']" routerLinkActive="active"> File Manager</a>
+    <a class="nav-link bi bi-pie-chart" [routerLink]="['/traffic']" routerLinkActive="active"> Traffic Analyzer</a>
+    <!-- <a class="nav-link active bi bi-people" [routerLink]="['/']"> User Manager</a> -->
+    <a href="#demo" class="nav-link bi bi-people" data-toggle="collapse"> User Manager</a>
+    <div id="demo" class="collapse mar" demo>
+        
+            <li ><a [routerLink]="['/users']" routerLinkActive="active" style="background-color: white !important;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                <circle cx="8" cy="8" r="8"/>
+              </svg> List Users</a></li>
+            <p style="color: rgb(68, 102, 177);">------------------------</p>
+            <li style="margin-top: 0px;"><a [routerLink]="['/adduser']" routerLinkActive="active" style="background-color: white !important;"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                <circle cx="8" cy="8" r="8"/>
+              </svg> Add Users</a></li>
+        
+    </div>
+    <a class="nav-link bi bi-calendar2" [routerLink]="['/calendar']" routerLinkActive="active"> Calendar</a>
+    <a class="nav-link bi bi-chat-text" [routerLink]="['/messages']" routerLinkActive="active"> Messages <span class="badge badge-secondary float-right rounded-circle mt-1">8</span> </a>
+    <a class="nav-link bi bi-credit-card" [routerLink]="['/payments']" routerLinkActive="active"> Payments</a>
+</nav>
+<br>
+<br>
+<hr>
+<footer>
+    <div class="row float-bottom" style="margin-left: 20px;">
+        <a class="bi bi-box-arrow-in-left" href="" (click)="logout()">Logout</a>
+    </div>
+</footer>

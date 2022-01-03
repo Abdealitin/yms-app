@@ -1,0 +1,8 @@
+input{
+    width: 300px !important;
+    background-color: rgb(216, 215, 215) !important;
+    border-radius: 10px !important;
+}
+button{
+    border-radius: 10px !important;
+}

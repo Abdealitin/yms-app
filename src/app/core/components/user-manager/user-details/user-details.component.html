@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn" (click)="onPress()"><i class="bi bi-arrow-left"></i></button>
+        <b>User Details</b>
+        <hr>
+    </div>
+</div>
+
+
+<div class="row" *ngIf="loaded else loading">
+    <div class="col-md-2">
+        <!-- <img src="https://img.icons8.com/bubbles/100/000000/administrator-male.png" alt="Avatar Logo"/> -->
+        <img
+            class="img img-responsive rounded-circle"
+            src="{{ userav.avatar }}"
+          />
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-2">
+                <label>Name: </label>
+            </div>
+            <div class="col-md-6">
+                <input style="border-radius: 10px;padding: 4px; background-color: rgb(207, 205, 205);" type="text" disabled value="{{user.name}}"/>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div class="col-md-2">
+                <label>User Name: </label>
+            </div>
+            <div class="col-md-6">
+                <input style="border-radius: 10px; padding: 4px;background-color: rgb(207, 205, 205);" type="text" disabled value="{{user.username}}"/>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div class="col-md-2">
+                <label>Email: </label>
+            </div>
+            <div class="col-md-6">
+                <input style="border-radius: 10px; padding: 4px;background-color: rgb(207, 205, 205);" type="text" disabled value="{{user.email}}"/>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #loading>
+    <div >
+        loading..
+    </div>
+</ng-template><br>
+
+<hr>
+<h5 class="text-center">Location</h5>
+<div class="row mt-2">
+    <div class="map" #mapElement></div>
+</div>

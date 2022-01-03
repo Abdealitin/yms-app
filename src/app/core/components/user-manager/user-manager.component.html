@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-12">
+        <b>User Manager</b><i class="bi bi-info-circle justify-content-center" style="float: right;"></i>
+        <hr>
+        <br>
+        <table class="table table-hover ">
+            <thead class="rounded-circle" style="background-color: hsla(0, 3%, 58%, .3);">
+              <tr style="color: rgba(139, 129, 129, 0.3); ">
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">City</th>
+                <th scope="col">Zipcode</th>
+                <th scope="col">Location on Map</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr @fade *ngFor = "let user of users | paginate: { itemsPerPage: count, currentPage: p }" [routerLink]="['/user',user.id]" >
+                
+                <th scope="row" class="bi bi-app" > &nbsp;&nbsp;&nbsp;&nbsp; {{user.id}}</th>
+                <td>{{user.name}}</td>
+                <td>{{user.username | limitval : 10}}</td>
+                <td>{{user.email | limitval : 5}}</td>
+                <td>{{user.address.city | limitval : 10}}</td>
+                <td>{{user.address.zipcode}}</td>
+                <td class="text-center"><i class="bi bi-geo-alt-fill" style="color: red;"></i></td>
+              
+              </tr>
+            
+            </tbody>
+          </table>
+         
+    </div>
+    
+</div>
+<div class="text-center">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

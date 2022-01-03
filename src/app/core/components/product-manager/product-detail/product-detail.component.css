@@ -1,0 +1,10 @@
+.card{
+    /* max-width: max-content !important; */
+    max-height: fit-content !important;
+}
+h5{
+    font-size: large !important;
+}
+.badge{
+    font-size: large !important;
+}

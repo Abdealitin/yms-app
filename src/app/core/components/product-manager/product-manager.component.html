@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-12">
+        <b>Products Lists</b>
+        <hr>
+    </div>
+</div>
+
+<div class="row card-group">
+    <div class="col-6" @fade *ngFor="let product of products | paginate: { itemsPerPage: count, currentPage: p }" >
+    <div class="card mb-3 border border-primary p-2 mr-1" style="max-width: 520px; border-radius: 10px; max-height: 230px;" [routerLink]="['/product',product.id]" >
+        <div class="row no-gutters">
+        <div class="col-md-5">
+            <svg class="bd-placeholder-img" width="100%" height="230" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><image attr.xlink:href="{{product.image}}" height="200" width="200"></image></svg>
+            
+        </div>
+        <div class="col-md-7">
+            <span class="badge badge-primary ml-3" >{{product.category}}</span>
+            <div class="card-body">
+            <h5 class="card-title">{{product.title | limitval : 40}}</h5>
+            <p class="card-text" style="font-size: x-small;">{{product.description | limitval: 130}}
+                </p>
+            <p class="card-text" style="font-size: large; color: rgb(64, 147, 202);">{{product.price-((10/100)*product.price) |currency:'USD':true}} <small class="text-muted"><s>{{product.price}}</s></small><br>
+                  <i 
+                    *ngFor="let i of product.rating.rate | getRating"
+                    [ngClass]="{ 'bi bi-star-fill': i, 'bi bi-star': !i }"></i>
+                    <span class="text-secondary"> ({{ product.rating.count }})</span>
+            </p>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

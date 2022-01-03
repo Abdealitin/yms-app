@@ -1,0 +1,29 @@
+.container{
+    /* max-width: 500px !important;
+    max-height: 500px !important; */
+    background-color: rgba(224, 223, 223, 0.377);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 400px;
+    margin-top: -200px /* half of you height */;
+    width: 500px;
+    margin-left: -250px /* half of you width */
+}
+.main{
+    display: flex;
+align-items: center;
+justify-content: center;
+}
+span{
+    font-size: xx-large !important;
+    max-width: 100px !important;
+    border-radius: 20px;
+}
+input{
+    min-width: 270px !important;
+    min-height: 40px !important;
+    border-radius: 10px;
+    border-color: white;
+    padding: 5px;
+}
