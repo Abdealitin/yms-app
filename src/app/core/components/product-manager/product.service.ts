@@ -20,6 +20,7 @@ export class ProductService implements OnInit {
     //   (response) => {this.products = response, console.log(response)},
     //   (error => {console.log(error)})
     // );
+    //Hello
   }
 
   getProducts(){
