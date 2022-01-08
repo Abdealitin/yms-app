@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
-
 import { UserManagerComponent } from './components/user-manager/user-manager.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserService } from './components/user-manager/user.service';
@@ -31,11 +30,12 @@ import { AuthService } from '../auth.service';
 import { AuthGuard } from '../auth.guard';
 import { AgmCoreModule } from '@agm/core';
 import { GoogleMapsModule } from '@angular/google-maps';
- import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { ImgMagnifier } from 'ng-img-magnifier';
 import { GetRatingPipe } from './components/product-manager/get-rating.pipe';
 import { AddproductComponent } from './components/product-manager/addproduct/addproduct.component';
-
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 //import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 
@@ -78,6 +78,10 @@ import { AddproductComponent } from './components/product-manager/addproduct/add
     // AgmCoreModule.forRoot({
     //   apiKey: "AIzaSyClrkSJ0YLKHqBSCHX0L3lyMtbqvIFBhxA"
     // })
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    })
   ],
   exports: [
     SideNavbarComponent,
