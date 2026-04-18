@@ -29,6 +29,7 @@
                 "glob": "**/*",
                 "input": ".well-known",
                 "output": "/.well-known"
+              }
             ],
             "styles": [
               "src/styles.css"
