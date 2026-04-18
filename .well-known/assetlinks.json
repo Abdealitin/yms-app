@@ -1,0 +1,12 @@
+[ 
+ {
+   "relation" : ["delegate_permission/common.handle_all_urls"],
+   "target": {
+     "namespace": "android_app",
+     "package_name": "com.dummybank.issuer",
+     "sha256_cert_fingerprints": [
+       "CF:DF:6E:A0:12:32:8D:81:E1:7E:94:98:59:49:30:C7:9D:49:C6:BA:B9:17:AF:5A:22:BE:B0:29:01:59:AE:7B"
+     ]
+   }
+ }
+]
