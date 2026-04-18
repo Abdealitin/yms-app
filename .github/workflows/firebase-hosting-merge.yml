@@ -13,8 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm i --legacy-peer-deps
-      - run: npx update-browserslist-db@latest || true
-      - run: npm run build
+      - run: npx browserlist || true
+      - run: cat .browserlistrc || true
+      - run: npx ng build --prod
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
